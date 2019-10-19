@@ -1,0 +1,11 @@
+# depslib dependency file v1.0
+1514140574 source:c:\users\lenovo\documents\university\cèÀÎÄ\laba1.2\main.cpp
+	<iostream>
+
+1571507634 source:c:\users\lenovo\documents\university\cèÀÎÄ\laba1.2\src\car.cpp
+	"Car.h"
+
+1571507634 c:\users\lenovo\documents\university\cèÀÎÄ\laba1.2\include\car.h
+	<iostream>
+	<cstdlib>
+

@@ -1,73 +1,48 @@
 #include "Car.h"
 
-//создание списка
-void Car::createList(int year, string type, string country){
-
-    Car* newCar = new Car;
-
-    newCar->set_type(type);
-    newCar->set_country(country);
-    newCar->set_year(year);
-    newCar->set_next(0);
-
-    if(next == 0){
-        next = newCar;
-    }
-    else{
-        newCar->set_next(next);
-        next = newCar;
+Car::~Car(){
+    Node* cur = start;
+    while (cur){
+        cur = start->pNext;
+        delete start;
+        start = cur;
     }
 }
 
+void Car::pushBack(Node &node){
+    Node* cur = new Node;
 
-//вывод списка
+    cur->type=node.type;
+    cur->country=node.country;
+    cur->year=node.year;
+
+    cur->pNext = 0;
+
+    if(!start){
+        start = cur;
+        return;
+    }else{
+        Node* cur1 = start;
+        while(cur1->pNext){
+            cur1 = cur1->pNext;
+        }
+        cur1->pNext = cur;
+    }
+}
 void Car::outList(){
-    Car* newCar = next;
-        cout<<"Information.\n";
-    while (newCar){
-        cout<<"Type:"<<newCar->get_type()<<"\nCountry:"<<newCar->get_country()<<"\nYear:"<<newCar->get_year()<<endl;
-        newCar = newCar->get_next();
-        }
-}
-//поискк элемента по значению
-Car* Car::findElement(string value){
-
-    Car* pointer= next;
-
-    while(pointer){
-        if(pointer->get_type()==value)
-            break;
-        pointer=pointer->get_next();
+    Node *cur = start;
+    while(cur){
+    cout<<"Type:"<<cur->type<<"\nCountry:"<<cur->country<<"\nYear:"<<cur->year<<endl;
+    cur = cur->pNext;
     }
-    return pointer;
 }
-//вставка элемента
-Car* Car::pushEl(string type, string country, int year){
-    Car *temp, *ptr, *pointer=next;
-
-    temp=new Car;
-    temp->get_type();
-    temp->get_country();
-    temp->get_year();
-    temp = temp->get_next();
-
-    while(pointer->get_next()){
-        if (pointer->get_next()->get_type()==temp->get_type()){
-            if(pointer->get_next()->get_year()<temp->get_year()){
-            break;
-            }
-        }else if(pointer->get_type()==temp->get_type()){
-            break;
-        }
-    pointer=pointer->get_next();
-
-    }
-
-    //вставка
-    ptr=pointer->next;
-    pointer->next=temp;
-    temp->next = ptr;
-
-    return temp;
+void Node::input(Node &node){
+    cout<<"Заполните информацию о машине\n";
+    cout<<"Модель:";
+    cin>>type;
+    cout<<"\nСтрана:";
+    cin>>country;
+    cout<<"\nГод:";
+    cin>>year;
+    cout<<endl;
 }
-

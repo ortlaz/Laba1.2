@@ -1,13 +1,16 @@
 #include <iostream>
+#include "Car.h"
+#include <windows.h>
 
 using namespace std;
 
 int main()
 {
-     SetConsoleCP(1251);
+    SetConsoleCP(1251);
 	SetConsoleOutputCP(1251);
-    Car* List = NULL;
-    Models* Spisk = NULL;
+    Car List;
+    Node node;
+//    Models Spisk;
     int var;
 while(var){
     system("cls");
@@ -18,16 +21,17 @@ while(var){
 
     switch(var){
         case 1:{
-
-            int n=4;
-            //создание списка машин
-            createList(List,n);
+            for(int i=0; i<4;i++){
+           //something
+            node.input(node);
+            List.pushBack(node);
+            }
             system("pause");
             break;
         }
         case 2:{
             //вывод списка машин
-            outList(List);
+            List.outList();
             system("pause");
             break;
         }
@@ -35,34 +39,35 @@ while(var){
         case 3:{
             //поиск элемента
             cout<<"ELEMENT:\n";
-            Car* Lst = findElement(List, "Nissan");
-            while (Lst && Lst->type=="Nissan"){
-                cout<<"Type:"<<Lst->type<<"\nCountry:"<<Lst->country<<"\nYear:"<<Lst->year<<endl;
-                Lst = Lst->next;
+//            Car* Lst = List.findElement("Nissan");
+/*            while (Lst && Lst->get_type()=="Nissan"){
+                cout<<"Type:"<<Lst->get_type()<<"\nCountry:"<<Lst->get_country()<<"\nYear:"<<Lst->get_year()<<endl;
+                Lst = Lst->get_next();
             }
+            */
             system("pause");
             break;
         }
         case 4:{
             //вставка элемента
-            pushEl(List);
+//            List.pushEl();
             system("pause");
             break;
         }
         case 5:{
-            int m=2;
-            createNewList(Spisk,m, List);
+
+//            Spisk.createNewList();
             system("pause");
             break;
         }
         case 6:{
-            outNewList(Spisk);
+//            Spisk.outNewList();
             system("pause");
             break;
         }
         case 7:{
             //удаление элементов
-            deleteModel(Spisk,List, "BMW");
+//            Spisk.deleteModel("BMW");
             system("pause");
             break;
         }

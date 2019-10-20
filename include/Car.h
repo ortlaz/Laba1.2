@@ -5,31 +5,35 @@
 
 using namespace std;
 
-class Car
-{
-    private:
-        string type;
-        string country;
-        int year;
-        Car* next;
+struct Node{
+    string type;
+    string country;
+    int year;
 
-    public:
-        Car(){next =0;};
-        //setters
-        string get_type(){ return type; };
-        string get_country(){ return country; };
-        int get_year(){ return year; };
-        Car *get_next() { return this->next; };
-        //getters
-        string set_type(string tp){ type=tp; };
-        string set_country(string cntr){ country = cntr; };
-        int set_year(int yr){ year = yr; };
-        void set_next(Car* next) { this->next = next; };
+    void input(Node &node);
+    Node* pNext;
+};
 
-        void createList(int year, string type, string country);
-        void outList();
-        Car* findElement(string value);
-        Car* pushEl(string type, string country, int year);
+class Car{
+    Node* start; //указатель на начало списка
+public:
+    Car() : start(0) {};
+    ~Car();
+
+    //добавление узла в список
+    void pushBack(Node &node);
+
+    //вывод односвязного списка
+    void outList();
+
+    //поиск элемента
+
+
+    //вставка элемента
+
+
+    //удаление элементов
+
 
 };
 

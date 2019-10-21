@@ -35,8 +35,10 @@
 			<Add option="-fexceptions" />
 		</Compiler>
 		<Unit filename="include/Car.h" />
+		<Unit filename="include/Models.h" />
 		<Unit filename="main.cpp" />
 		<Unit filename="src/Car.cpp" />
+		<Unit filename="src/Models.cpp" />
 		<Extensions>
 			<code_completion />
 			<envvars />

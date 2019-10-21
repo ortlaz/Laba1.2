@@ -1,6 +1,7 @@
 #include <iostream>
 #include "Car.h"
 #include <windows.h>
+#include "Models.h"
 
 using namespace std;
 
@@ -10,7 +11,8 @@ int main()
 	SetConsoleOutputCP(1251);
     Car List;
     Node node;
-//    Models Spisk;
+    Element elem;
+    Models Spisk;
     int var;
 while(var){
     system("cls");
@@ -22,7 +24,6 @@ while(var){
     switch(var){
         case 1:{
             for(int i=0; i<4;i++){
-           //something
             node.input(node);
             List.pushBack(node);
             }
@@ -39,35 +40,40 @@ while(var){
         case 3:{
             //поиск элемента
             cout<<"ELEMENT:\n";
-//            Car* Lst = List.findElement("Nissan");
-/*            while (Lst && Lst->get_type()=="Nissan"){
-                cout<<"Type:"<<Lst->get_type()<<"\nCountry:"<<Lst->get_country()<<"\nYear:"<<Lst->get_year()<<endl;
-                Lst = Lst->get_next();
+            Node* Lst = List.findElement("Nissan");
+            while (Lst && Lst->type=="Nissan"){
+                cout<<"Type:"<<Lst->type<<"\nCountry:"<<Lst->country<<"\nYear:"<<Lst->year<<endl;
+                Lst = Lst->pNext;
             }
-            */
             system("pause");
             break;
         }
         case 4:{
             //вставка элемента
-//            List.pushEl();
+            for(int i=0; i<2;i++){
+            node.input(node);
+            List.insertEl(node);
+            }
             system("pause");
             break;
         }
         case 5:{
-
-//            Spisk.createNewList();
+            //создание списка моделей
+            elem.input(elem);
+            Node *p = List.findElement(elem.model);
+            Spisk.pushBack(p, elem);
             system("pause");
             break;
         }
         case 6:{
-//            Spisk.outNewList();
+            //вывод списка моделей
+            Spisk.outList();
             system("pause");
             break;
         }
         case 7:{
             //удаление элементов
-//            Spisk.deleteModel("BMW");
+            List.delEl(node,"BMW",Spisk.findElement("BMW"));
             system("pause");
             break;
         }

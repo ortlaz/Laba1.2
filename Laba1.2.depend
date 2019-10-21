@@ -1,21 +1,20 @@
 # depslib dependency file v1.0
-1571600194 source:c:\users\lenovo\documents\university\c枥文\laba1.2\main.cpp
+1571683586 source:c:\users\lenovo\documents\university\c枥文\laba1.2\main.cpp
 	<iostream>
 	"Car.h"
 	<windows.h>
-
-1571600526 source:c:\users\lenovo\documents\university\c枥文\laba1.2\src\car.cpp
-	"Car.h"
-
-1571599421 c:\users\lenovo\documents\university\c枥文\laba1.2\include\car.h
-	<iostream>
-	<cstdlib>
-
-1571592899 source:c:\users\lenovo\documents\university\c枥文\laba1.2\src\models.cpp
 	"Models.h"
 
-1571592899 c:\users\lenovo\documents\university\c枥文\laba1.2\include\models.h
+1571681965 source:c:\users\lenovo\documents\university\c枥文\laba1.2\src\car.cpp
+	"Car.h"
+
+1571677534 c:\users\lenovo\documents\university\c枥文\laba1.2\include\car.h
 	<iostream>
 	<cstdlib>
+
+1571683338 source:c:\users\lenovo\documents\university\c枥文\laba1.2\src\models.cpp
+	"Models.h"
+
+1571683338 c:\users\lenovo\documents\university\c枥文\laba1.2\include\models.h
 	"Car.h"
 

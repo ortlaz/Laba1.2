@@ -50,18 +50,19 @@ while(var){
         }
         case 4:{
             //вставка элемента
-            for(int i=0; i<2;i++){
             node.input(node);
             List.insertEl(node);
-            }
+
             system("pause");
             break;
         }
         case 5:{
             //создание списка моделей
+            for(int i=0; i<2;i++){
             elem.input(elem);
             Node *p = List.findElement(elem.model);
             Spisk.pushBack(p, elem);
+            }
             system("pause");
             break;
         }

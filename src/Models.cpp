@@ -28,13 +28,13 @@ void Models::pushBack(Node *p, Element &elem){
 void Models::outList(){
     Element *cur = head;
     while(cur){
-    cout<<"Type:"<<cur->model<<"\nÓêàçàòåëü íà ðÿä:"<<cur->beg<<endl;
+    cout<<"Type:"<<cur->model<<"\nÐ£ÐºÐ°Ð·Ð°Ñ‚ÐµÐ»ÑŒ Ð½Ð° Ñ€ÑÐ´:"<<cur->beg<<endl;
     cur = cur->next;
     }
 }
 void Element::input(Element &elem){
-    cout<<"Çàïîëíèòå èíôîðìàöèþ î ìàøèíå\n";
-    cout<<"Ìîäåëü:";
+    cout<<"Ð—Ð°Ð¿Ð¾Ð»Ð½Ð¸Ñ‚Ðµ Ð¸Ð½Ñ„Ð¾Ñ€Ð¼Ð°Ñ†Ð¸ÑŽ Ð¾ Ð¼Ð°ÑˆÐ¸Ð½Ðµ\n";
+    cout<<"ÐœÐ¾Ð´ÐµÐ»ÑŒ:";
     cin>>model;
 
 }

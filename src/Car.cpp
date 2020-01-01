@@ -35,12 +35,12 @@ void Car::outList(){
     }
 }
 void Node::input(Node &node){
-    cout<<"Çàïîëíèòå èíôîðìàöèþ î ìàøèíå\n";
-    cout<<"Ìîäåëü:";
+    cout<<"Ð—Ð°Ð¿Ð¾Ð»Ð½Ð¸Ñ‚Ðµ Ð¸Ð½Ñ„Ð¾Ñ€Ð¼Ð°Ñ†Ð¸ÑŽ Ð¾ Ð¼Ð°ÑˆÐ¸Ð½Ðµ\n";
+    cout<<"ÐœÐ¾Ð´ÐµÐ»ÑŒ:";
     cin>>type;
-    cout<<"\nÑòðàíà:";
+    cout<<"\nÐ¡Ñ‚Ñ€Ð°Ð½Ð°:";
     cin>>country;
-    cout<<"\nÃîä:";
+    cout<<"\nÐ“Ð¾Ð´:";
     cin>>year;
     cout<<endl;
 }
@@ -101,7 +101,7 @@ void Car::insertEl(Node &node){
     temp->type=node.type;
     temp->country=node.country;
     temp->year=node.year;
-    //âñòàâêà
+    //Ð²ÑÑ‚Ð°Ð²ÐºÐ°
     temp->pNext=c->pNext;
     c->pNext = temp;
 }

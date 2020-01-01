@@ -12,19 +12,19 @@ struct Element{
 };
 
 class Models{
-    Element* head; //указатель на начало списка
+    Element* head; //СѓРєР°Р·Р°С‚РµР»СЊ РЅР° РЅР°С‡Р°Р»Рѕ СЃРїРёСЃРєР°
     Element* ending;
 public:
     Models() : head(0), ending(0) {};
     ~Models();
 
-    //добавление узла в список
+    //РґРѕР±Р°РІР»РµРЅРёРµ СѓР·Р»Р° РІ СЃРїРёСЃРѕРє
     void pushBack(Node *p, Element &elem);
 
-    //вывод односвязного списка
+    //РІС‹РІРѕРґ РѕРґРЅРѕСЃРІСЏР·РЅРѕРіРѕ СЃРїРёСЃРєР°
     void outList();
 
-    //поиск элемента
+    //РїРѕРёСЃРє СЌР»РµРјРµРЅС‚Р°
     Node* findElement(string value);
 
 };
